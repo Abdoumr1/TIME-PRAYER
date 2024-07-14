@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chalenge prier</title>
+    <link rel="stylesheet" href="csspriere.css">
+    <meta http-equiv="pragma" content="no-cache" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+<script src="./node_modules/axios/dist/axios.min.js"></script>
+<script src="./jsprier.js"></script>
+</head>
+<style>
+    body{
+        direction: rtl;
+        background:  linear-gradient(45deg, rgb(205, 123, 9), rgb(202, 134, 17));
+        font-family: "Tajawal", sans-serif;
+
+
+    }
+    #cityname{
+        font-size: 110px;
+        color: white;
+        font-weight: 400;
+    }
+    h1,h2,h3,h4,h5,h6{
+        margin: 0;
+    }
+    .card{
+        background-color: white;
+        height: 60%;
+        width: 10%;
+        border-radius: 10px;
+        margin-left: 30px ;
+
+        /* font-size: ; */
+        box-shadow: 0px 10px 5px rgb(130, 77, 33);
+    }
+    .header h1{
+        background-color: rgb(233, 180, 22);
+        font-size: 40px;
+        font-weight: 750;
+        color: white;
+
+        }
+    .center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .time h1  {
+        font-size: 100;
+        color: rgb(233, 180, 22); ;
+    }
+
+</style>
+<body>
+    <div>
+        <div style=" margin-right: 40px;">
+            <h1 id="cityname"> الرياض</h1>
+            <h6 id="datep" style="font-size: 25px; color: white; font-weight: 300;">الجمعة 26 نوفمبر</h6>
+        </div>
+        <hr style="margin: 1px 40px;">
+    </div>
+    <div style="height: 300px; margin-top: 80px; display: flex; flex-direction: row; justify-content: center;" >
+        <div class="card">
+                <div class="header">
+                    <h1>الفجر</h1>
+                </div>   
+                <div class="time center" style="height: 70%;">
+                    <h1 id="Fajr-time">4:30</h1>
+                </div> 
+        </div>
+        <div class="card">
+                <div class="header">
+                    <h1 >الشروق</h1>
+                </div>   
+                <div class="time center" style="height: 70%;">
+                    <h1 id="sun-rainsing">4:30</h1>
+                </div> 
+        </div>
+        <div class="card">
+                <div class="header">
+                    <h1>الظهر</h1>
+                </div>   
+                <div class="time center" style="height: 70%;">
+                    <h1 id="dohr-time">4:30</h1>
+                </div> 
+        </div>
+        <div class="card">
+                <div class="header">
+                    <h1>العصر</h1>
+                </div>   
+                <div class="time center" style="height: 70%;">
+                    <h1 id="asr-time">4:30</h1>
+                </div> 
+        </div>
+        <div class="card">
+                <div class="header">
+                    <h1 >المغرب</h1>
+                </div>   
+                <div class="time center" style="height: 70%;">
+                    <h1 id="maghreb-time">4:30</h1>
+                </div> 
+        </div>
+        <div class="card">
+                <div class="header">
+                    <h1 >العشاء</h1>
+                </div>   
+                <div class="time center" style="height: 70%;">
+                    <h1 id="isha-time">4:30</h1>
+                </div> 
+        </div>
+    </div>
+    <div class="center">
+        <select   id="cities-select" style="height:40px; width: 230px; border-radius: 15px; font-family: tajawal;  box-shadow: 0px 10px 5px rgb(130, 77, 33) ">
+            lp
+        </select>
+    </div>
+</body>
+</html>

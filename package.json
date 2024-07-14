@@ -1,0 +1,14 @@
+{
+  "name": "time-of-priere",
+  "version": "1.0.0",
+  "main": "jsprier.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.2"
+  }
+}

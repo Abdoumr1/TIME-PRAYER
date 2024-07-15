@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>chalenge prier</title>
+    <title>TIME OF PRAYER</title>
+    <link rel="shortcut icon" type="x-icon" href="prayer.png" >
     <link rel="stylesheet" href="csspriere.css">
     <meta http-equiv="pragma" content="no-cache" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,14 +29,20 @@
     h1,h2,h3,h4,h5,h6{
         margin: 0;
     }
+    .card-parent{
+        height: 300px; 
+        margin-top: 80px; 
+        display: flex; 
+        flex-wrap: wrap;
+        flex-direction: row; 
+        justify-content: center;
+    }
     .card{
         background-color: white;
         height: 60%;
         width: 10%;
         border-radius: 10px;
         margin-left: 30px ;
-
-        /* font-size: ; */
         box-shadow: 0px 10px 5px rgb(130, 77, 33);
     }
     .header h1{
@@ -43,7 +50,6 @@
         font-size: 40px;
         font-weight: 750;
         color: white;
-
         }
     .center{
         display: flex;
@@ -54,23 +60,43 @@
         font-size: 100;
         color: rgb(233, 180, 22); ;
     }
+    @media screen and (max-width: 850px) {
+    .card-parent {
+        height: auto; /* Change height to auto to allow flexibility */
+        margin-top: 80px;
+        flex-direction: column; /* Change flex-direction to column */
+        align-items: center; /* Align items to the center */
+    }
+
+    .card {
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 20px; /* Add bottom margin for spacing */
+        width: 80%; /* Adjust width for better visibility on smaller screens */
+        height: 150px;
+    }
+}
+
+
+        
+        
+    
 
 </style>
 <body>
     <div>
         <div style=" margin-right: 40px;">
-            <h1 id="cityname"> الرياض</h1>
+            <h1 id="cityname"> اختر المدينة من فضلك</h1>
             <h6 id="datep" style="font-size: 25px; color: white; font-weight: 300;">الجمعة 26 نوفمبر</h6>
         </div>
         <hr style="margin: 1px 40px;">
     </div>
-    <div style="height: 300px; margin-top: 80px; display: flex; flex-direction: row; justify-content: center;" >
+    <div class="card-parent"  >
         <div class="card">
                 <div class="header">
                     <h1>الفجر</h1>
                 </div>   
                 <div class="time center" style="height: 70%;">
-                    <h1 id="Fajr-time">4:30</h1>
+                    <h1 id="Fajr-time">- - -</h1>
                 </div> 
         </div>
         <div class="card">
@@ -78,7 +104,7 @@
                     <h1 >الشروق</h1>
                 </div>   
                 <div class="time center" style="height: 70%;">
-                    <h1 id="sun-rainsing">4:30</h1>
+                    <h1 id="sun-rainsing">- - -</h1>
                 </div> 
         </div>
         <div class="card">
@@ -86,7 +112,7 @@
                     <h1>الظهر</h1>
                 </div>   
                 <div class="time center" style="height: 70%;">
-                    <h1 id="dohr-time">4:30</h1>
+                    <h1 id="dohr-time">- - -</h1>
                 </div> 
         </div>
         <div class="card">
@@ -94,7 +120,7 @@
                     <h1>العصر</h1>
                 </div>   
                 <div class="time center" style="height: 70%;">
-                    <h1 id="asr-time">4:30</h1>
+                    <h1 id="asr-time">- - -</h1>
                 </div> 
         </div>
         <div class="card">
@@ -102,7 +128,7 @@
                     <h1 >المغرب</h1>
                 </div>   
                 <div class="time center" style="height: 70%;">
-                    <h1 id="maghreb-time">4:30</h1>
+                    <h1 id="maghreb-time">- - -</h1>
                 </div> 
         </div>
         <div class="card">
@@ -110,7 +136,7 @@
                     <h1 >العشاء</h1>
                 </div>   
                 <div class="time center" style="height: 70%;">
-                    <h1 id="isha-time">4:30</h1>
+                    <h1 id="isha-time">- - -</h1>
                 </div> 
         </div>
     </div>

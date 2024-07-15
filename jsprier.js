@@ -14,16 +14,12 @@ document.addEventListener("DOMContentLoaded", function() {
             engname: "Oran"
         }
     ];
-
     let content = "";
     for (const city of cities) {
         content += `<option>${city.arname}</option>`;
     }
-// let nmc= cityname;
-
+    
     document.getElementById("cities-select").innerHTML += content;
-
-    // Event listener for city selection
     let cityname = ""
     document.getElementById("cities-select").addEventListener("change", function() {
         let selectedCity = this.value;
@@ -45,18 +41,16 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("Selected city name (English):", cityname);
     });
 });
-// let nmc= cityname;
-// timesprayerscities(cityname)
+
 function timesprayerscities(cityname){  
-        params ={
-            country :"DZ",
-            city : cityname
-        }
-        axios.get('http://api.aladhan.com/v1/timingsByCity', {
+    params ={
+        country :"DZ",
+        city : cityname
+    }
+    axios.get('http://api.aladhan.com/v1/timingsByCity', {
         params: params
-        })
-        .then(function (response) {
-        // console.log(response.data.data.timings.Fajr);
+    })
+    .then(function (response) {
         let rsp = response.data.data.timings
         document.getElementById("Fajr-time").innerHTML=rsp.Fajr
         filltimeprayers("Fajr-time",rsp.Fajr)
@@ -70,17 +64,15 @@ function timesprayerscities(cityname){
         let nmday = response.data.data.date.hijri.weekday.ar
         document.getElementById("datep").innerHTML = nmday + rdb
 
-        })
-        .catch(function (error) {
+    })
+    .catch(function (error) {
         console.log(error);
-        })
-        .finally(function () {
-        // always executed
-        }); 
-
-        function filltimeprayers(id,time ){
+    })
+    
+    function filltimeprayers(id,time ){
             document.getElementById(id).innerHTML=time
 
         }
 
 }
+
